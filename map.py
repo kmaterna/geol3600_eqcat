@@ -1,13 +1,23 @@
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 
-def plot_map(long, lat, magnitude):
-    plt.scatter(long, lat, size = magnitude)
+def plot_map(earthquakes):
+    longitudes = []
+    latitudes = []
+    magnitudes = []
+
+    # loop through each earthquake to get lat, long and magnitude
+    for eq in earthquakes:
+        longitudes.append(eq.longitude)
+        latitudes.append(eq.latitude)
+        magnitudes.append(eq.magnitude)
+
+    # so points are visible on map
+    sizes = []
+    for mag in magnitudes:
+        sizes.append(mag * 20)
+
+    plt.scatter(longitudes, latitudes, s=sizes)
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
-    plt.title("Map of Longitude vs Latitude")
+    plt.title("Earthquake Map")
     plt.show()
-
-
- 
