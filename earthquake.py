@@ -1,6 +1,3 @@
-import numpy as np
-import pandas as pd
-
 class Earthquake():
     def __init__(self, depth, mag, lat, long, time):
         self.depth=depth
