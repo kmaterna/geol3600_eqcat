@@ -1,5 +1,10 @@
 class Earthquake():
     def __init__(self, depth, mag, lat, long, time):
+        # depth: depth of the earthquake in km, downward from the surface, float
+        # mag: magnitude of the earthquake, float
+        #lat: -90 to 90 float,
+        #long: -180 to 180 float,
+        #time: dt.datetime object
         self.depth=depth
         self.mag=mag
         self.lat=lat
