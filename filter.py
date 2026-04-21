@@ -15,5 +15,5 @@ def filter_time(eq,starttime,endtime)
         (eq['time'] >= start_time) & 
         (eq['time'] <= end_time)
     ]
-    return filtered_df
+    return timed_eqs
 
